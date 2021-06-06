@@ -12,8 +12,8 @@ class Service {
 
   async saveUrl(url){
     const idGenerated = idGenerator(url);
-    const isSaved = await this.db.saveUrls(url, idGenerated);
-    return isSaved;
+    const response = await this.db.saveUrls(url, idGenerated);
+    return response;
   };
 
   async getUrl(url){

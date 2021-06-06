@@ -5,9 +5,9 @@ class DB {
   async saveUrls(longUrl, shortUrl) {
     try {
       await url.create({longUrl: longUrl, shortUrl: shortUrl});
-      return true;
+      return `Your short url for ${longUrl} is : ${shortUrl}`;
     } catch {
-      return false;
+      return 'Something happened, we had an error';
     };
   };
 

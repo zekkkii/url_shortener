@@ -9,14 +9,8 @@ export const index = (req, res)=>{
 
 export const urlShortener = async (req, res)=>{
   const url =req.body.url;
-  let message = 'Nothing saved';
+  const message = await service.saveUrl(url);
 
-  console.log(url);
-  const isSaved = await service.saveUrl(url);
-
-  if (isSaved) {
-    message = 'data Saved';
-  };
   res.send(message);
 };
 
@@ -29,6 +23,7 @@ export const redirectToUrl = async (req, res)=>{
     res.redirect(urlToRedirect.longUrl);
   };
 
-  res.send('No encontramos nada relacionado con esta url en la base de datos');
+  // eslint-disable-next-line quotes
+  res.send("We couldn't find any matches with this url :'(");
 };
 
