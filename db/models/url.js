@@ -1,7 +1,6 @@
 import {DataTypes} from 'sequelize';
 import db from '../../config/dbconfig';
 
-
 const url = db.define('urls',
     {
       id: {
@@ -20,6 +19,5 @@ const url = db.define('urls',
     {
       timestamps: false,
     });
-
 
 export default url;
