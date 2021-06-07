@@ -11,7 +11,6 @@ const config = {
   dbName: process.env.DB_NAME,
 };
 
-
 const db = new Sequelize(config.dbName, config.dbUser, config.dbPassword, {
   host: config.dbHost,
   dialect: 'postgres',
