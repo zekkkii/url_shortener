@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec babel-node app.js"
+    "start": "nodemon --exec babel-node ./src/app.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -15,6 +14,7 @@
     "@babel/node": "^7.14.2",
     "eslint": "^7.28.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
     "nodemon": "^2.0.7"
   },
   "dependencies": {

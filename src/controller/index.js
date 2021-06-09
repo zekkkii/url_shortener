@@ -26,4 +26,3 @@ export const redirectToUrl = async (req, res)=>{
   // eslint-disable-next-line quotes
   res.send("We couldn't find any matches with this url :'(");
 };
-

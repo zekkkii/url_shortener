@@ -4,7 +4,6 @@
 import idGenerator from '../helpers/shortIdGenerator';
 import DB from '../db/db';
 
-
 class Service {
   constructor(){
     this.db = new DB();

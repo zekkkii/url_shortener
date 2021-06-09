@@ -4,7 +4,6 @@ import express from 'express';
 import routes from './routes/index';
 import {notFound404} from './middlewares/index';
 
-
 const app = express();
 
 app.use(express.json());
