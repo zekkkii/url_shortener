@@ -1,23 +1,20 @@
-import {DataTypes} from 'sequelize';
-import db from '../../config/dbconfig';
-
-const url = db.define('urls',
-    {
-      id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      longUrl: {
-        type: DataTypes.STRING,
-      },
-      shortUrl: {
-        type: DataTypes.STRING,
-      },
-    },
-    // extra config
-    {
-      timestamps: false,
-    });
-
-export default url;
+/* eslint-disable require-jsdoc */
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Url extends Model {
+    static associate(models) {
+    }
+  };
+  Url.init({
+    longUrl: DataTypes.STRING,
+    shortUrl: DataTypes.STRING
+  }, {
+    sequelize,
+    modelName: 'url',
+    timestamps: false
+  });
+  return Url;
+};
